@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.4;
+    background-color: #f0f0f0;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema oscuro */
+.tema-oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.tema-oscuro nav ul {
+    background-color: #1f1f1f;
+}
+
+.tema-oscuro nav ul li a:hover {
+    background-color: #444;
+}
+
+.tema-oscuro .tarjeta {
+    background-color: #1f1f1f;
+    border-color: #555;
+}
+
+.tema-oscuro .tarjeta--destacada {
+    border-color: gold;
+}
+
+.tema-oscuro .meta {
+    color: #aaa;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: white;
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    display: inline-block; /* block dentro de grid/flex */
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* Decoración ::before (icono) */
+.tarjeta::before {
+    content: "🎮";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 1.5rem;
+}
+
+/* Decoración ::after (número o símbolo) */
+.tarjeta--destacada::after {
+    content: "★";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Clases reutilizables */
+.titulo {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.resaltado {
+    color: red;
+}
+
+/* Grid responsive */
+.tarjetas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Id específico */
+#titulo-principal {
+    text-align: center;
+    margin: 20px 0;
+    color: darkblue;
+}
+
+/* Bonus: scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive básico */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tarjeta {
+        width: 90%;
+    }
+}
