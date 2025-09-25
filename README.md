@@ -16,4 +16,5 @@ Este proyecto organiza mi colección de videojuegos retro utilizando tarjetas vi
 
 ## Cómo visualizar
 Abrir `index.html` en cualquier navegador  
-publicado en GitHub Pages :
+publicado en GitHub Pages : https://github.com/Maximiliano213/Trabajo-8.git
+
